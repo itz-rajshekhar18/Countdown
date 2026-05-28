@@ -65,14 +65,8 @@ function App() {
   })
 
   useEffect(() => {
-    const getTargetDate = () => {
-      const tomorrow = new Date()
-      tomorrow.setDate(tomorrow.getDate() + 1)
-      tomorrow.setHours(13, 0, 0, 0)
-      return tomorrow
-    }
-
-    const targetDate = getTargetDate()
+    // Set target date to May 29, 2026 at 1:00 PM
+    const targetDate = new Date('2026-05-29T13:00:00')
 
     const updateCountdown = () => {
       const now = new Date().getTime()
